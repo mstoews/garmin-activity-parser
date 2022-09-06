@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRADEEXT>
+    <TRADE 
+    recordno="148931" 
+    glosstraderef="00000000000000138893" 
+    versiono="1" 
+    origin="TE" 
+    tradetype="ECAG" 
+    settlementstatus="CANC" 
+    tradestatus="C" 
+    originversion="2">
+        <EXTERNALREF extreftype="AVER" extref="JPY" />
+        <EXTERNALREF extreftype="FOTR" extref="REF210727PFS18320361" />
+        <EXTERNALREF extreftype="INT" extref="00000000000000138893" />
+        <EXTERNALREF extreftype="JTRN" extref="0000000138893100" />
+        <EXTERNALREF extreftype="SALE" extref="SalespersonSalespers" />
+        <EXTERNALREF extreftype="SJTR" extref="S000000138893100" />
+        <EXTERNALREF extreftype="TREF" extref="REF210727PFS18320361" />
+        <EXTERNALREF extreftype="TRIF" extref="REF210727PFS18320361" />
+        <EXTERNALREF extreftype="TRNO" extref="00000000000000148931" />
+        <DATE datetype="ASDC" datewil="2021-07-29" time="07:00:00" versionuser="SYS" />
+        <DATE datetype="ASDT" datewil="2021-07-29" time="07:00:00" versionuser="SYS" />
+        <DATE datetype="INSD" datewil="2022-04-06" time="16:50:57" versionuser="SYS" />
+        <DATE datetype="SYSD" datewil="2022-04-06" time="16:50:57" versionuser="SYS" />
+        <DATE datetype="TDAS" datewil="2021-07-27" time="00:00:00" versionuser="SYS" />
+        <DATE datetype="TDAT" datewil="2021-07-27" time="10:00:00" versionuser="SYS" />
+        <DATE datetype="VDAS" datewil="2021-07-29" time="00:00:00" versionuser="SYS" />
+        <DATE datetype="VDAT" datewil="2021-07-29" time="00:00:00" versionuser="SYS" />
+        <DRIVER drivertype="ACDR" drivercode="NORM" />
+        <DRIVER drivertype="COPR" drivercode="CSEL" />
+        <DRIVER drivertype="CSTS" drivercode="DVPS" />
+        <DRIVER drivertype="HLDV" drivercode="HOLD" />
+        <DRIVER drivertype="LETG" drivercode="NOLG" />
+        <DRIVER drivertype="OPER" drivercode="CSEL" />
+        <DRIVER drivertype="PADR" drivercode="NORM" />
+        <DRIVER drivertype="PAID" drivercode="A" />
+        <DRIVER drivertype="PCUS" drivercode="NORM" />
+        <DRIVER drivertype="POSP" drivercode="01" />
+        <DRIVER drivertype="PRCT" drivercode="AP" />
+        <DRIVER drivertype="PSMT" drivercode="TRAD" />
+        <DRIVER drivertype="PSTP" drivercode="NORM" />
+        <DRIVER drivertype="PTYP" drivercode="ECAG" />
+        <DRIVER drivertype="SCOD" drivercode="JDEC" />
+        <DRIVER drivertype="SETR" drivercode="TRAD" />
+        <DRIVER drivertype="SSIC" drivercode="Y" />
+        <DRIVER drivertype="STRM" drivercode="FOP" />
+        <DRIVER drivertype="STTP" drivercode="NONE" />
+        <DRIVER drivertype="STYP" drivercode="NORM" />
+        <DRIVER drivertype="TSET" drivercode="PSMS" />
+        <DRIVER drivertype="TTYP" drivercode="ECAG" />
+        <DRIVER drivertype="UPSM" drivercode="YE" />
+        <DURATION durationtype="ADAY" durationunit="DAY" duration="0" />
+        <INSTRUMENT instrtype="AINS" p2000instrref="JPY" instrreftype="INT" instrref="JPY" longname="Japanese Yen" quantity="333333333333.333"></INSTRUMENT>
+        <INSTRUMENT instrtype="COBI" p2000instrref="JPY" instrreftype="" instrref="" longname="Japanese Yen" quantity="0.000"></INSTRUMENT>
+        <INSTRUMENT instrtype="DENO" p2000instrref="JPY" instrreftype="" instrref="" longname="Japanese Yen" quantity="0.000"></INSTRUMENT>
+        <INSTRUMENT instrtype="PINS" p2000instrref="6758" instrreftype="INT" instrref="6758" longname="SONY ORD" quantity="100010001000.100">
+            <INSTEXT service="INT" extref="6758" />
+            <INSTEXT service="ISIC" extref="JP3541600007:JP" />
+            <INSTEXT service="ISIN" extref="JP3541600007" />
+            <INSTEXT service="QUIK" extref="6758" />
+            <INSTEXT service="SICC" extref="67580" />
+        </INSTRUMENT>
+        <INSTRUMENT instrtype="SINS" p2000instrref="JPY" instrreftype="INT" instrref="JPY" longname="Japanese Yen" quantity="480748074807.405"></INSTRUMENT>
+        <INSTRUMENT instrtype="TCCY" p2000instrref="JPY" instrreftype="INT" instrref="JPY" longname="Japanese Yen" quantity="481048104810.005"></INSTRUMENT>
+        <JOURNAL accountscompany="CMP4" journaltype="VDAC" postingtype="VDAC" journalno="452" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="VDAC" postingtype="VDAC" journalno="1138" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="CATP" journalno="14790" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="JPEQ" journalno="14791" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="LEDG" journalno="14792" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="PROJ" journalno="14793" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="CATP" journalno="17511" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="JPEQ" journalno="17512" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="LEDG" journalno="17513" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="PROJ" journalno="17514" procaction="C" />
+        <LINK link_type_wil="CLAM" main_record_no_wil="148931" sub_record_no_wil="185690" link_qty_wil="0.000" link_status_wil="X"></LINK>
+        <LINK link_type_wil="CLAM" main_record_no_wil="148931" sub_record_no_wil="185766" link_qty_wil="0.000" link_status_wil="X"></LINK>
+        <LINK link_type_wil="CLAM" main_record_no_wil="148931" sub_record_no_wil="185871" link_qty_wil="0.000" link_status_wil="X"></LINK>
+        <LINK link_type_wil="CLAM" main_record_no_wil="148931" sub_record_no_wil="185950" link_qty_wil="0.000" link_status_wil="A"></LINK>
+        <TRADENARRATIVE narrativecode="INAR" seqno="1" narrative="JJASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JA" />
+        <TRADENARRATIVE narrativecode="INTL" seqno="1" narrative="Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Int" />
+        <TRADENARRATIVE narrativecode="PUBL" seqno="1" narrative="Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment," />
+        <TRADENARRATIVE narrativecode="TNAR" seqno="1" narrative="Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative," />
+        <PARTY tradeparty="COMP" partyref="CMP4" partyreftype="INT" extpartyref="CMP4" longname="BR SEC JAPAN"></PARTY>
+        <PARTY tradeparty="MKT" partyref="TKS EXCHANGE" partyreftype="INT" extpartyref="TKS EXCHANGE" longname="TOKYO STOCK EXCHANGE"></PARTY>
+        <PARTY tradeparty="PBK" partyref="AGCYBOOK" partyreftype="INT" extpartyref="AGCYBOOK" longname="Agency Book"></PARTY>
+        <PARTY tradeparty="SECP" partyref="AM550831" partyreftype="INT" extpartyref="AM550831" longname="AMUNDI-JTSB A C 550831">
+            <PARTYDRIVER tradeparty="SECP" drivertype="CONF" drivercode="NORM" />
+            <PARTYDRIVER tradeparty="SECP" drivertype="PCHG" drivercode="EC1" />
+        </PARTY>
+        <RATE chargelevytype="COMM" actualcharge="NONE" amounttype="C" rateinstrreftype="INT" rateinstrref="JPY" rateinstrid="JPY" rateentered="-1" chargerate="-1.00000000" multdivind="" />
+        <RATE chargelevytype="CTAX" actualcharge="NONE" amounttype="C" rateinstrreftype="INT" rateinstrref="JPY" rateinstrid="JPY" rateentered="-1" chargerate="-1.00000000" multdivind="" />
+        <RATE chargelevytype="NFAC" actualcharge="" amounttype="R" rateinstrreftype="" rateinstrref="" rateinstrid="" rateentered="" chargerate="1.00000000" multdivind="M" />
+        <RATE chargelevytype="TPRC" actualcharge="" amounttype="P" rateinstrreftype="" rateinstrref="" rateinstrid="JPY" rateentered="48148148.481481" chargerate="48148148.48148100" multdivind="M" />
+        <AMOUNT charge_levy_type_p2k="COMM" charge_levy_instr_p2k="JPY" charge_discount_wil="-" charge_levy_qty_p2k="241241241241.24" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="CTAX" charge_levy_instr_p2k="JPY" charge_discount_wil="-" charge_levy_qty_p2k="191919191919.19" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="PBAS" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="PQTY" charge_levy_instr_p2k="6758" charge_discount_wil="+" charge_levy_qty_p2k="100010001000.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="PVAL" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="SBAS" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="-480748074807.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="SPRN" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="SQTY" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="480748074807.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="TPRN" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="TSQT" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="381221004983.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="VACC" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="333333333333.00" charge_levy_rate_p2k="0.0" />
+        <SETTLEMENT deliverytype="PSET" settleeventinstr="6758" settleterms="FOP" originalqty="100010001000.000" openqty="100010001000.000" settledate="2021-07-29T00:00" delrecind="R" settlestatus="C" tradestatus="C" settlenarrative1="" settlenarrative2="" settlenarrative3="" settlenarrative4="" settlenarrative5="" settlenarrative6="" settlenarrative7="" settlenarrative8="" comp_alias_wil="JASD00" comp_alias_desc="JASD00" comp_depot_type_wil="COMP" comp_dacc_wil="JASD00" comp_service_wil="JASDEC" secp_alias_wil="JASD00" secp_service_wil="JASDEC"></SETTLEMENT>
+        <SETTLEMENT deliverytype="SSET" settleeventinstr="JPY" settleterms="FOP" originalqty="480748074807.000" openqty="480748074807.000" settledate="2021-07-29T00:00" delrecind="D" settlestatus="C" tradestatus="C" settlenarrative1="" settlenarrative2="" settlenarrative3="" settlenarrative4="" settlenarrative5="" settlenarrative6="" settlenarrative7="" settlenarrative8="" comp_alias_wil="JPY CASH" comp_alias_desc="JPY CASH" comp_depot_type_wil="COMP" comp_dacc_wil="JPY CASH" comp_service_wil="JASDEC" secp_alias_wil="JPY CASH" secp_service_wil="JASDEC"></SETTLEMENT>
+        <PROCESSING procalias="TPRO" procaction="N" duedatetime="2021-07-27T00:00" donedatetime="2022-04-06T16:51">
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-04-06T00:00" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:50" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-04-06T16:51" eventdateto="9999-12-31T00:00" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="CONF" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FONF" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FVAL" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JFTE" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JTRE" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="LEDG" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="SETD" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="SETD" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SETD" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="FAIL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="SETD &lt;msg no 110&gt;&lt;Severity 2&gt;: No settlement instructions found between COMP Comm Service JASDEC and SECP Comm Service JASDEC, Del/Rec D,  Settle Term FOP  Stock Cash C Transaction Settle Type PSMS" />
+            </PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SETD" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="SEVG" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TDAC" procaction="N" duedatetime="2021-07-27T00:00" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TDAC" eventdate="2022-04-06T16:51" eventdateto="2022-05-02T10:57" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TDAC" eventdate="2022-05-02T10:57" eventdateto="2022-08-09T14:11" entrydatetime="2022-05-02T10:57" eventcode="FAIL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="*DAC &lt;msg no 51&gt;&lt;Severity 2&gt;: Error in translating account code #PINS@PBK/FX." />
+            </PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TDAC" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TGEN" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TVAL" procaction="N" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="VDAC" procaction="N" duedatetime="2022-05-02T12:02" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-04-06T16:51" eventdateto="2022-05-02T10:57" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-05-02T10:57" eventdateto="2022-05-02T12:02" entrydatetime="2022-05-02T10:57" eventcode="FAIL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="VDAC &lt;msg no 57&gt;&lt;Severity 2&gt;: No open period for posting transactions." />
+            </PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-05-02T12:02" eventdateto="2022-05-02T12:02" entrydatetime="2022-05-02T12:02" eventcode="RQUD" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-05-02T12:02" eventdateto="2022-08-09T14:11" entrydatetime="2022-05-02T12:02" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TPRO" procaction="C" duedatetime="2022-08-09T14:10" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="CONF" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FONF" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FVAL" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JFTE" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JTRE" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="LEDG" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="SEVG" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TGEN" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TVAL" procaction="C" duedatetime="2022-04-06T16:50" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="VDAC" procaction="C" duedatetime="2022-08-09T14:11" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-08-09T14:11" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:11" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <INSTRUCTION procaction="N" destination="PSMS" procstatus="SCAN" recordidentifier="00000000000000138893" recordversion="1" instformat="TSMT" tradeparty="" partyref="" deliverytype="" addresscode="" servicestatus="" noofcopies="1" duedatetime="2022-04-06T16:51">
+            <INSTRUCTIONEVENT eventtype="JMA" eventdate="2022-04-06T16:51" eventdateto="9999-12-30T00:00" entrydatetime="2022-04-06T16:51" eventcode="GFAL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="SYS  &lt;msg no 2563&gt;&lt;Severity 2&gt;: Field SELLER (Seller) is mandatory." />
+            </INSTRUCTIONEVENT>
+            <INSTRUCTIONEVENT eventtype="JMA" eventdate="2022-04-06T16:51" eventdateto="2022-04-06T16:51" entrydatetime="2022-04-06T16:51" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></INSTRUCTIONEVENT>
+            <INSTRUCTIONEVENT eventtype="JMA" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="9999-12-30T00:00" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></INSTRUCTIONEVENT>
+        </INSTRUCTION>
+        <EVENT eventtype="PROC" eventdate="2022-04-06T00:00" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-06T16:50" eventcode="INSD" exceptiontype="INSD" expirydate="9999-12-31T00:00">
+            <EVENTNARRATIVE narrativecode="USER" seqno="1" narrative="by UgaiM" />
+        </EVENT>
+        <EVENT eventtype="TSET" eventdate="2022-04-06T16:51" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-06T16:51" eventcode="OPEN" exceptiontype="PEND" expirydate="9999-12-31T00:00"></EVENT>
+        <EVENT eventtype="SSEV" eventdate="2022-04-06T16:51" eventdateto="9999-12-31T00:00" entrydatetime="2022-04-06T16:51" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></EVENT>
+        <EVENT eventtype="PROC" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="CXLD" exceptiontype="COMP" expirydate="9999-12-31T00:00">
+            <EVENTNARRATIVE narrativecode="USER" seqno="1" narrative="by JMARSDEN" />
+        </EVENT>
+        <EVENT eventtype="TSET" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="SUPC" expirydate="9999-12-31T00:00"></EVENT>
+        <TRADECODE tradeclass="8088" tradecode="6" />
+        <TRADECODE tradeclass="8105" tradecode="OWN" />
+        <TRADECODE tradeclass="8106" tradecode="PSDM" />
+        <TRADECODE tradeclass="8118" tradecode="OWN" />
+    </TRADE>
+
+    <TRADE recordno="149933" glosstraderef="00000000000000139892" versiono="1" origin="TE" tradetype="ECAG" settlementstatus="CANC" tradestatus="C" originversion="2">
+        <EXTERNALREF extreftype="AVER" extref="JPY" />
+        <EXTERNALREF extreftype="FOTR" extref="REF210727PFS18320362" />
+        <EXTERNALREF extreftype="INT" extref="00000000000000139892" />
+        <EXTERNALREF extreftype="JTRN" extref="0000000139892100" />
+        <EXTERNALREF extreftype="SALE" extref="SalespersonSalespers" />
+        <EXTERNALREF extreftype="SJTR" extref="S000000139892100" />
+        <EXTERNALREF extreftype="TREF" extref="REF210727PFS18320362" />
+        <EXTERNALREF extreftype="TRIF" extref="REF210727PFS18320362" />
+        <EXTERNALREF extreftype="TRNO" extref="00000000000000149933" />
+        <DATE datetype="ASDC" datewil="2021-07-29" time="07:00:00" versionuser="SYS" />
+        <DATE datetype="ASDT" datewil="2021-07-29" time="07:00:00" versionuser="SYS" />
+        <DATE datetype="INSD" datewil="2022-04-08" time="09:41:49" versionuser="SYS" />
+        <DATE datetype="SYSD" datewil="2022-04-08" time="09:41:49" versionuser="SYS" />
+        <DATE datetype="TDAS" datewil="2021-07-27" time="00:00:00" versionuser="SYS" />
+        <DATE datetype="TDAT" datewil="2021-07-27" time="10:00:00" versionuser="SYS" />
+        <DATE datetype="VDAS" datewil="2021-07-29" time="00:00:00" versionuser="SYS" />
+        <DATE datetype="VDAT" datewil="2021-07-29" time="00:00:00" versionuser="SYS" />
+        <DRIVER drivertype="ACDR" drivercode="NORM" />
+        <DRIVER drivertype="COPR" drivercode="CSEL" />
+        <DRIVER drivertype="CSTS" drivercode="DVPS" />
+        <DRIVER drivertype="HLDV" drivercode="HOLD" />
+        <DRIVER drivertype="LETG" drivercode="NOLG" />
+        <DRIVER drivertype="OPER" drivercode="CSEL" />
+        <DRIVER drivertype="PADR" drivercode="NORM" />
+        <DRIVER drivertype="PAID" drivercode="A" />
+        <DRIVER drivertype="PCUS" drivercode="NORM" />
+        <DRIVER drivertype="POSP" drivercode="01" />
+        <DRIVER drivertype="PRCT" drivercode="AP" />
+        <DRIVER drivertype="PSMT" drivercode="TRAD" />
+        <DRIVER drivertype="PSTP" drivercode="NORM" />
+        <DRIVER drivertype="PTYP" drivercode="ECAG" />
+        <DRIVER drivertype="SCOD" drivercode="JDEC" />
+        <DRIVER drivertype="SETR" drivercode="TRAD" />
+        <DRIVER drivertype="SSIC" drivercode="Y" />
+        <DRIVER drivertype="STRM" drivercode="FOP" />
+        <DRIVER drivertype="STTP" drivercode="NONE" />
+        <DRIVER drivertype="STYP" drivercode="NORM" />
+        <DRIVER drivertype="TSET" drivercode="PSMS" />
+        <DRIVER drivertype="TTYP" drivercode="ECAG" />
+        <DRIVER drivertype="UPSM" drivercode="YE" />
+        <DURATION durationtype="ADAY" durationunit="DAY" duration="0" />
+        <INSTRUMENT instrtype="COBI" p2000instrref="JPY" instrreftype="" instrref="" longname="Japanese Yen" quantity="0.000"></INSTRUMENT>
+        <INSTRUMENT instrtype="DENO" p2000instrref="JPY" instrreftype="" instrref="" longname="Japanese Yen" quantity="0.000"></INSTRUMENT>
+        <INSTRUMENT instrtype="PINS" p2000instrref="6758" instrreftype="INT" instrref="6758" longname="SONY ORD" quantity="100010001000.100">
+            <INSTEXT service="INT" extref="6758" />
+            <INSTEXT service="ISIC" extref="JP3541600007:JP" />
+            <INSTEXT service="ISIN" extref="JP3541600007" />
+            <INSTEXT service="QUIK" extref="6758" />
+            <INSTEXT service="SICC" extref="67580" />
+        </INSTRUMENT>
+        <INSTRUMENT instrtype="SINS" p2000instrref="JPY" instrreftype="INT" instrref="JPY" longname="Japanese Yen" quantity="480748074807.405"></INSTRUMENT>
+        <INSTRUMENT instrtype="TCCY" p2000instrref="JPY" instrreftype="INT" instrref="JPY" longname="Japanese Yen" quantity="481048104810.005"></INSTRUMENT>
+        <JOURNAL accountscompany="CMP4" journaltype="VDAC" postingtype="VDAC" journalno="364" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="VDAC" postingtype="VDAC" journalno="1137" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="CATP" journalno="14794" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="JPEQ" journalno="14795" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="LEDG" journalno="14796" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="PROJ" journalno="14797" procaction="N" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="CATP" journalno="17507" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="JPEQ" journalno="17508" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="LEDG" journalno="17509" procaction="C" />
+        <JOURNAL accountscompany="CMP4" journaltype="LEDG" postingtype="PROJ" journalno="17510" procaction="C" />
+        <LINK link_type_wil="CLAM" main_record_no_wil="149933" sub_record_no_wil="185687" link_qty_wil="0.000" link_status_wil="X"></LINK>
+        <LINK link_type_wil="CLAM" main_record_no_wil="149933" sub_record_no_wil="185780" link_qty_wil="0.000" link_status_wil="X"></LINK>
+        <LINK link_type_wil="CLAM" main_record_no_wil="149933" sub_record_no_wil="185873" link_qty_wil="0.000" link_status_wil="X"></LINK>
+        <LINK link_type_wil="CLAM" main_record_no_wil="149933" sub_record_no_wil="185959" link_qty_wil="0.000" link_status_wil="A"></LINK>
+        <TRADENARRATIVE narrativecode="INAR" seqno="1" narrative="JJASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JASDEC Narrative, JA" />
+        <TRADENARRATIVE narrativecode="INTL" seqno="1" narrative="Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Internal Comment, Int" />
+        <TRADENARRATIVE narrativecode="PUBL" seqno="1" narrative="Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment, Public Comment," />
+        <TRADENARRATIVE narrativecode="TNAR" seqno="1" narrative="Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative, Trade Narrative," />
+        <PARTY tradeparty="COMP" partyref="CMP4" partyreftype="INT" extpartyref="CMP4" longname="BR SEC JAPAN"></PARTY>
+        <PARTY tradeparty="MKT" partyref="TKS EXCHANGE" partyreftype="INT" extpartyref="TKS EXCHANGE" longname="TOKYO STOCK EXCHANGE"></PARTY>
+        <PARTY tradeparty="PBK" partyref="AGCYBOOK" partyreftype="INT" extpartyref="AGCYBOOK" longname="Agency Book"></PARTY>
+        <PARTY tradeparty="SECP" partyref="AM550831" partyreftype="INT" extpartyref="AM550831" longname="AMUNDI-JTSB A C 550831">
+            <PARTYDRIVER tradeparty="SECP" drivertype="CONF" drivercode="NORM" />
+            <PARTYDRIVER tradeparty="SECP" drivertype="PCHG" drivercode="EC1" />
+        </PARTY>
+        <RATE chargelevytype="COMM" actualcharge="NONE" amounttype="C" rateinstrreftype="INT" rateinstrref="JPY" rateinstrid="JPY" rateentered="-1" chargerate="-1.00000000" multdivind="" />
+        <RATE chargelevytype="CTAX" actualcharge="NONE" amounttype="C" rateinstrreftype="INT" rateinstrref="JPY" rateinstrid="JPY" rateentered="-1" chargerate="-1.00000000" multdivind="" />
+        <RATE chargelevytype="NFAC" actualcharge="" amounttype="R" rateinstrreftype="" rateinstrref="" rateinstrid="" rateentered="" chargerate="1.00000000" multdivind="M" />
+        <RATE chargelevytype="TPRC" actualcharge="" amounttype="P" rateinstrreftype="" rateinstrref="" rateinstrid="JPY" rateentered="48148148.481481" chargerate="48148148.48148100" multdivind="M" />
+        <AMOUNT charge_levy_type_p2k="COMM" charge_levy_instr_p2k="JPY" charge_discount_wil="-" charge_levy_qty_p2k="241241241241.24" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="CTAX" charge_levy_instr_p2k="JPY" charge_discount_wil="-" charge_levy_qty_p2k="191919191919.19" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="PBAS" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="PQTY" charge_levy_instr_p2k="6758" charge_discount_wil="+" charge_levy_qty_p2k="100010001000.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="PVAL" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="SBAS" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="-480748074807.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="SPRN" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="SQTY" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="480748074807.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="TPRN" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="481048104810.00" charge_levy_rate_p2k="0.0" />
+        <AMOUNT charge_levy_type_p2k="TSQT" charge_levy_instr_p2k="JPY" charge_discount_wil="+" charge_levy_qty_p2k="47887671650.00" charge_levy_rate_p2k="0.0" />
+        <SETTLEMENT deliverytype="PSET" settleeventinstr="6758" settleterms="FOP" originalqty="100010001000.000" openqty="100010001000.000" settledate="2021-07-29T00:00" delrecind="R" settlestatus="C" tradestatus="C" settlenarrative1="" settlenarrative2="" settlenarrative3="" settlenarrative4="" settlenarrative5="" settlenarrative6="" settlenarrative7="" settlenarrative8="" comp_alias_wil="JASD00" comp_alias_desc="JASD00" comp_depot_type_wil="COMP" comp_dacc_wil="JASD00" comp_service_wil="JASDEC" secp_alias_wil="JASD00" secp_service_wil="JASDEC"></SETTLEMENT>
+        <SETTLEMENT deliverytype="SSET" settleeventinstr="JPY" settleterms="FOP" originalqty="480748074807.000" openqty="480748074807.000" settledate="2021-07-29T00:00" delrecind="D" settlestatus="C" tradestatus="C" settlenarrative1="" settlenarrative2="" settlenarrative3="" settlenarrative4="" settlenarrative5="" settlenarrative6="" settlenarrative7="" settlenarrative8="" comp_alias_wil="JPY CASH" comp_alias_desc="JPY CASH" comp_depot_type_wil="COMP" comp_dacc_wil="JPY CASH" comp_service_wil="JASDEC" secp_alias_wil="JPY CASH" secp_service_wil="JASDEC"></SETTLEMENT>
+        <PROCESSING procalias="TPRO" procaction="N" duedatetime="2021-07-27T00:00" donedatetime="2022-04-08T09:42">
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-04-08T00:00" eventdateto="2022-04-08T09:42" entrydatetime="2022-04-08T09:41" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-04-08T09:42" eventdateto="9999-12-31T00:00" entrydatetime="2022-04-08T09:42" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="CONF" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FONF" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FVAL" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:42" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-04-08T09:42" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:42" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JFTE" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JTRE" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-04-08T09:42" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="LEDG" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="SETD" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="SETD" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SETD" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="FAIL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="SETD &lt;msg no 110&gt;&lt;Severity 2&gt;: No settlement instructions found between COMP Comm Service JASDEC and SECP Comm Service JASDEC, Del/Rec D,  Settle Term FOP  Stock Cash C Transaction Settle Type PSMS" />
+            </PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SETD" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="SEVG" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TDAC" procaction="N" duedatetime="2021-07-27T00:00" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="TDAC" eventdate="2022-04-08T09:42" eventdateto="2022-05-02T10:57" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TDAC" eventdate="2022-05-02T10:57" eventdateto="2022-08-09T14:10" entrydatetime="2022-05-02T10:57" eventcode="FAIL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="*DAC &lt;msg no 51&gt;&lt;Severity 2&gt;: Error in translating account code #PINS@PBK/FX." />
+            </PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TDAC" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TGEN" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TVAL" procaction="N" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-04-08T09:42" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="VDAC" procaction="N" duedatetime="2022-05-02T11:57" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-04-08T09:42" eventdateto="2022-05-02T10:57" entrydatetime="2022-04-08T09:42" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-05-02T10:57" eventdateto="2022-05-02T11:57" entrydatetime="2022-05-02T10:57" eventcode="FAIL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="VDAC &lt;msg no 57&gt;&lt;Severity 2&gt;: No open period for posting transactions." />
+            </PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-05-02T11:57" eventdateto="2022-05-02T11:57" entrydatetime="2022-05-02T11:57" eventcode="RQUD" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-05-02T11:57" eventdateto="2022-08-09T14:10" entrydatetime="2022-05-02T11:57" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TPRO" procaction="C" duedatetime="2022-08-09T14:10" donedatetime="2022-08-09T14:10">
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:10" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TPRO" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="CONF" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FONF" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="CONF" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="FVAL" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="FVAL" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JFTE" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JFTE" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="JTRE" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="JTRE" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="LEDG" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="LEDG" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="SEVG" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="SEVG" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TGEN" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TGEN" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="TVAL" procaction="C" duedatetime="2022-04-08T09:41" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="TVAL" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <PROCESSING procalias="VDAC" procaction="C" duedatetime="2022-08-09T14:10" donedatetime="2022-08-09T14:11">
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-08-09T14:10" eventdateto="2022-08-09T14:11" entrydatetime="2022-08-09T14:10" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+            <PROCESSINGEVENT eventtype="VDAC" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></PROCESSINGEVENT>
+        </PROCESSING>
+        <INSTRUCTION procaction="N" destination="PSMS" procstatus="SCAN" recordidentifier="00000000000000139892" recordversion="1" instformat="TSMT" tradeparty="" partyref="" deliverytype="" addresscode="" servicestatus="" noofcopies="1" duedatetime="2022-04-08T09:43">
+            <INSTRUCTIONEVENT eventtype="JMA" eventdate="2022-04-08T09:43" eventdateto="9999-12-30T00:00" entrydatetime="2022-04-08T09:43" eventcode="GFAL" exceptiontype="EXCP" expirydate="9999-12-31T00:00">
+                <EVENTNARRATIVE narrativecode="ERR" seqno="1" narrative="SYS  &lt;msg no 2563&gt;&lt;Severity 2&gt;: Field SELLER (Seller) is mandatory." />
+            </INSTRUCTIONEVENT>
+            <INSTRUCTIONEVENT eventtype="JMA" eventdate="2022-04-08T09:43" eventdateto="2022-04-08T09:43" entrydatetime="2022-04-08T09:43" eventcode="QUED" exceptiontype="PEND" expirydate="9999-12-31T00:00"></INSTRUCTIONEVENT>
+            <INSTRUCTIONEVENT eventtype="JMA" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="9999-12-30T00:00" eventcode="SUPC" exceptiontype="COMP" expirydate="9999-12-31T00:00"></INSTRUCTIONEVENT>
+        </INSTRUCTION>
+        <EVENT eventtype="PROC" eventdate="2022-04-08T00:00" eventdateto="2022-08-09T14:10" entrydatetime="2022-04-08T09:41" eventcode="INSD" exceptiontype="INSD" expirydate="9999-12-31T00:00">
+            <EVENTNARRATIVE narrativecode="USER" seqno="1" narrative="by UgaiM" />
+        </EVENT>
+        <EVENT eventtype="TSET" eventdate="2022-04-08T09:43" eventdateto="2022-08-09T14:11" entrydatetime="2022-04-08T09:43" eventcode="OPEN" exceptiontype="PEND" expirydate="9999-12-31T00:00"></EVENT>
+        <EVENT eventtype="SSEV" eventdate="2022-04-08T09:43" eventdateto="9999-12-31T00:00" entrydatetime="2022-04-08T09:43" eventcode="DONE" exceptiontype="COMP" expirydate="9999-12-31T00:00"></EVENT>
+        <EVENT eventtype="PROC" eventdate="2022-08-09T14:10" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:10" eventcode="CXLD" exceptiontype="COMP" expirydate="9999-12-31T00:00">
+            <EVENTNARRATIVE narrativecode="USER" seqno="1" narrative="by JMARSDEN" />
+        </EVENT>
+        <EVENT eventtype="TSET" eventdate="2022-08-09T14:11" eventdateto="9999-12-31T00:00" entrydatetime="2022-08-09T14:11" eventcode="SUPC" exceptiontype="SUPC" expirydate="9999-12-31T00:00"></EVENT>
+        <TRADECODE tradeclass="8088" tradecode="6" />
+        <TRADECODE tradeclass="8105" tradecode="OWN" />
+        <TRADECODE tradeclass="8106" tradecode="PSDM" />
+        <TRADECODE tradeclass="8118" tradecode="OWN" />
+    </TRADE>
+</TRADEEXT>

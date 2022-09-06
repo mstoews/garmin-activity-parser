@@ -1,0 +1,93 @@
+type INSTEXT struct {
+        XMLName    xml.Name `xml:"INSTEXT"`
+        Text       string   `xml:",chardata"`
+        INSTRUMENT []struct {
+        Text       string `xml:",chardata"`
+        Instref    string `xml:"instref,attr"`
+        Instgrp    string `xml:"instgrp,attr"`
+        Longdesc   string `xml:"longdesc,attr"`
+        Denminst   string `xml:"denminst,attr"`
+        Pricedps   string `xml:"pricedps,attr"`
+        Divisor    string `xml:"divisor,attr"`
+        Multiplier string `xml:"multiplier,attr"`
+        Pricetype  string `xml:"pricetype,attr"`
+        Tick       string `xml:"tick,attr"`
+        Accrued    string `xml:"accrued,attr"`
+        Minqty     string `xml:"minqty,attr"`
+        Qtydps     string `xml:"qtydps,attr"`
+        Shrtdesc   string `xml:"shrtdesc,attr"`
+        Market     string `xml:"market,attr"`
+        Settinst   string `xml:"settinst,attr"`
+        Book       string `xml:"book,attr"`
+        Maxmovt    string `xml:"maxmovt,attr"`
+        Minmovt    string `xml:"minmovt,attr"`
+        Active     string `xml:"active,attr"`
+        Verdat     string `xml:"verdat,attr"`
+        INSTFLAG   []struct {
+        Text  string `xml:",chardata"`
+        Class string `xml:"class,attr"`
+        Code  string `xml:"code,attr"`
+        } `xml:"INSTFLAG"`
+        INSTCLASS []struct {
+        Text  string `xml:",chardata"`
+        Class string `xml:"class,attr"`
+        Code  string `xml:"code,attr"`
+        } `xml:"INSTCLASS"`
+        DENOM struct {
+        Text    string `xml:",chardata"`
+        Denmqty string `xml:"denmqty,attr"`
+        } `xml:"DENOM"`
+        INSTNARR []struct {
+        Text      string `xml:",chardata"`
+        Narrcode  string `xml:"narrcode,attr"`
+        SeqNoWil  string `xml:"seq_no_wil,attr"`
+        Narrative string `xml:"narrative,attr"`
+        } `xml:"INSTNARR"`
+        INSTEXT []struct {
+        Text    string `xml:",chardata"`
+        Service string `xml:"service,attr"`
+        Extref  string `xml:"extref,attr"`
+        } `xml:"INSTEXT"`
+        INSTAMT []struct {
+        Text     string `xml:",chardata"`
+        Amnt     string `xml:"amnt,attr"`
+        Amntqty  string `xml:"amntqty,attr"`
+        Amntinst string `xml:"amntinst,attr"`
+        } `xml:"INSTAMT"`
+        INSTPTY []struct {
+        Text  string `xml:",chardata"`
+        Itype string `xml:"itype,attr"`
+        Iref  string `xml:"iref,attr"`
+        Iqty  string `xml:"iqty,attr"`
+        } `xml:"INSTPTY"`
+        INSTASSC []struct {
+        Text     string `xml:",chardata"`
+        Assctype string `xml:"assctype,attr"`
+        Asscinst string `xml:"asscinst,attr"`
+        } `xml:"INSTASSC"`
+        ATTACHED struct {
+        Text      string `xml:",chardata"`
+        Assoc     string `xml:"assoc,attr"`
+        Attach    string `xml:"attach,attr"`
+        Attachamt string `xml:"attachamt,attr"`
+        Hostamt   string `xml:"hostamt,attr"`
+        Sepdate   string `xml:"sepdate,attr"`
+        } `xml:"ATTACHED"`
+        EQUITY struct {
+        Text    string `xml:",chardata"`
+        Registr string `xml:"registr,attr"`
+        } `xml:"EQUITY"`
+        ISSUE struct {
+        Text           string `xml:",chardata"`
+        Issuer         string `xml:"issuer,attr"`
+        Issuetype      string `xml:"issuetype,attr"`
+        Issueprice     string `xml:"issueprice,attr"`
+        Issuepricetype string `xml:"issuepricetype,attr"`
+        Issueqty       string `xml:"issueqty,attr"`
+        Issuedate      string `xml:"issuedate,attr"`
+        Leadmanager    string `xml:"leadmanager,attr"`
+        Guarantor      string `xml:"guarantor,attr"`
+        Guarantype     string `xml:"guarantype,attr"`
+        } `xml:"ISSUE"`
+        } `xml:"INSTRUMENT"`
+        }
