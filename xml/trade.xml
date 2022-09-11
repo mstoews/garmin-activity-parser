@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TRADEEXT>
-    <TRADE 
-    recordno="148931" 
-    glosstraderef="00000000000000138893" 
-    versiono="1" 
-    origin="TE" 
-    tradetype="ECAG" 
-    settlementstatus="CANC" 
-    tradestatus="C" 
-    originversion="2">
+    <TRADE recordno="148931" glosstraderef="00000000000000138893" versiono="1" origin="TE" tradetype="ECAG" settlementstatus="CANC" tradestatus="C" originversion="2">
         <EXTERNALREF extreftype="AVER" extref="JPY" />
         <EXTERNALREF extreftype="FOTR" extref="REF210727PFS18320361" />
         <EXTERNALREF extreftype="INT" extref="00000000000000138893" />

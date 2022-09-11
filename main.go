@@ -1,12 +1,26 @@
 package main
 
 import (
+	"database/sql"
 	"encoding/xml"
+	"flag"
 	"fmt"
+	_ "github.com/lib/pq"
 	"io/ioutil"
 	"log"
 	"os"
 	"time"
+)
+
+var (
+	debug         = flag.Bool("debug", true, "enable debugging")
+	password      = flag.String("password", "secret", "the database password")
+	port     *int = flag.Int("port", 32342, "the database port")
+	server        = flag.String("server", "localhost", "the database server")
+	user          = flag.String("user", "root", "the database user")
+	database      = flag.String("database", "postgres", "database name")
+	source        = flag.String("source", "trade", "Source type (inst, party, trade)")
+	filename      = flag.String("filename", "./xml/trades.xml", "XML file name")
 )
 
 type TRADEEXT struct {
@@ -391,13 +405,91 @@ type PARTYEXT struct {
 
 func main() {
 	start := time.Now()
-	xmlFile, err := os.Open("./xml/trades.xml")
-	// if we os.Open returns an error then handle it
+	flag.Parse()
+
+	if *debug {
+		fmt.Printf(" password:%s\n", *password)
+		fmt.Printf(" port:%d\n", *port)
+		fmt.Printf(" server:%s\n", *server)
+		fmt.Printf(" user:%s\n", *user)
+		fmt.Printf(" database:%s\n", *database)
+		fmt.Printf(" source:%s\n", *source)
+		fmt.Printf(" filename:%s\n", *filename)
+	}
+
+	fmt.Printf("Source:  %s\n", *source)
+	fmt.Printf("File name:  %s\n", *filename)
+	psqlconn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", *server, *port, *user, *password, *database)
+
+	fmt.Printf("Connecting to database %s\n", psqlconn)
+
+	db, err := sql.Open("postgres", psqlconn)
+	CheckError(err)
+
+	defer db.Close()
+
+	// Open our xmlFile
+	switch *source {
+	case "inst":
+		processInstruments(*filename, db)
+	case "party":
+		processParty(*filename)
+	case "trade":
+		processTrade(*filename, db)
+	default:
+		panic("Invalid source")
+	}
+	log.Printf("main, execution time %s\n", time.Since(start))
+}
+
+func CheckError(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
+
+func processParty(filename string) {
+	xmlFile, err := os.Open(filename)
+	if err != nil {
+		fmt.Println(err)
+
+		fmt.Printf("Successfully Opened %s", filename)
+		// defer the closing of our xmlFile so that we can parse it later on
+		defer xmlFile.Close()
+	}
+	byteValue, _ := ioutil.ReadAll(xmlFile)
+	var partyExt PARTYEXT
+	xml.Unmarshal(byteValue, &partyExt)
+	insertParty(&partyExt)
+	// insertExternalRef(&partyExt)
+}
+
+func insertParty(pty *PARTYEXT) {
+	for i := 0; i < len(pty.PARTY); i++ {
+		fmt.Printf("insert into pty_party (pty_partyref, pty_category, pty_longdesc, pty_holiday, pty_country, pty_location, pty_shrtdesc, pty_partynam1, pty_partynam2, pty_partynam3, pty_active, pty_verdat) values ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');\n",
+			pty.PARTY[i].Partyref,
+			pty.PARTY[i].Category,
+			pty.PARTY[i].Longdesc,
+			pty.PARTY[i].Holiday,
+			pty.PARTY[i].Country,
+			pty.PARTY[i].Location,
+			pty.PARTY[i].Shrtdesc,
+			pty.PARTY[i].Partynam1,
+			pty.PARTY[i].Partynam2,
+			pty.PARTY[i].Partynam3,
+			pty.PARTY[i].Active,
+			pty.PARTY[i].Verdat)
+	}
+
+}
+
+func processTrade(filename string, db *sql.DB) {
+	xmlFile, err := os.Open(filename)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	fmt.Println("Successfully Opened trades.xml")
+	fmt.Printf("Successfully Opened %s", filename)
 	// defer the closing of our xmlFile so that we can parse it later on
 	defer xmlFile.Close()
 
@@ -406,24 +498,98 @@ func main() {
 	var trdExt TRADEEXT
 
 	xml.Unmarshal(byteValue, &trdExt)
-	insertTrades(&trdExt)
-	insertPartyAssoc(&trdExt)
-	log.Printf("main, execution time %s\n", time.Since(start))
+	insertTrades(&trdExt, db)
 }
 
-func insertTrades(trd *TRADEEXT) {
+func processInstruments(filename string, db *sql.DB) {
+	xmlFile, err := os.Open(filename)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Printf("Successfully Opened %s", filename)
+	defer xmlFile.Close()
+	byteValue, _ := ioutil.ReadAll(xmlFile)
+	var instExt INSTEXT
+	xml.Unmarshal(byteValue, &instExt)
+	// insertInstruments(&instExt, db)
+}
+
+func insertTrades(trd *TRADEEXT, db *sql.DB) {
 	for i := 0; i < len(trd.TRADE); i++ {
-		fmt.Println("Record No: " + trd.TRADE[i].Recordno)
+		var index = i
+		execTrdTrade(trd, db, index)
+		execTrdExternalRef(trd, db, index)
+		execTrdSettlement(trd, db, index)
 	}
 }
 
-func insertPartyAssoc(trd *TRADEEXT) {
-	for i := 0; i < len(trd.TRADE); i++ {
-		fmt.Println(trd.TRADE[i].Recordno)
-		for j := 0; j < len(trd.TRADE[i].EXTERNALREF); j++ {
-			fmt.Printf("External Ref: %s %s\n",
-				trd.TRADE[i].EXTERNALREF[j].Extreftype,
-				trd.TRADE[i].EXTERNALREF[j].Extref)
+func execTrdTrade(trd *TRADEEXT, db *sql.DB, i int) {
+	insertStatement := fmt.Sprintf("insert into trd_trade ( trd_recordno, trd_glosstraderef, trd_versiono, trd_origin, trd_tradetype, trd_settlementstatus, trd_tradestatus, trd_originversion) values ( %s,%s,%s,'%s','%s','%s','%s',%s);\n",
+		trd.TRADE[i].Recordno,
+		trd.TRADE[i].Glosstraderef,
+		trd.TRADE[i].Versiono,
+		trd.TRADE[i].Origin,
+		trd.TRADE[i].Tradetype,
+		trd.TRADE[i].Settlementstatus,
+		trd.TRADE[i].Tradestatus,
+		trd.TRADE[i].Originversion)
+	_, err := db.Exec(insertStatement)
+	if err != nil {
+		fmt.Printf("error %s", err)
+	}
+}
+
+func execTrdExternalRef(trd *TRADEEXT, db *sql.DB, index int) {
+	for j := 0; j < len(trd.TRADE[index].EXTERNALREF); j++ {
+		insertStatement := fmt.Sprintf("insert into trd_external_ref (trd_recordno,ext_ref_extreftype, ext_ref_extref) values (%s,'%s','%s');",
+			trd.TRADE[index].Recordno,
+			trd.TRADE[index].EXTERNALREF[j].Extreftype,
+			trd.TRADE[index].EXTERNALREF[j].Extref)
+		_, err := db.Exec(insertStatement)
+		if err != nil {
+			fmt.Printf("error %s", err)
+		}
+	}
+}
+
+func execTrdSettlement(trd *TRADEEXT, db *sql.DB, index int) {
+	var i = index
+	for j := 0; j < len(trd.TRADE[i].SETTLEMENT); j++ {
+		insertStatement := fmt.Sprintf("insert into trd_settlement (trd_recordno, trd_deliverytype, trd_settleeventinstr, trd_settleterms, trd_originalqty,"+
+			"trd_openqty, trd_settledate, trd_delrecind, trd_settlestatus, trd_tradestatus, "+
+			"trd_settlenarrative1, trd_settlenarrative2, trd_settlenarrative3, trd_settlenarrative4,"+
+			"trd_settlenarrative5, trd_settlenarrative6, trd_settlenarrative7, trd_settlenarrative8, "+
+			"trd_dompaliaswil, trd_dompaliasdesc, trd_dompdepottypewil, trd_dompdaccwil,"+
+			"trd_dompservicewil, trd_secpaliaswil, trd_secpservicewil)"+
+			"values (%s,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');\n",
+			trd.TRADE[i].Recordno,
+			trd.TRADE[i].SETTLEMENT[j].Deliverytype,
+			trd.TRADE[i].SETTLEMENT[j].Settleeventinstr,
+			trd.TRADE[i].SETTLEMENT[j].Settleterms,
+			trd.TRADE[i].SETTLEMENT[j].Originalqty,
+			trd.TRADE[i].SETTLEMENT[j].Openqty,
+			trd.TRADE[i].SETTLEMENT[j].Settledate,
+			trd.TRADE[i].SETTLEMENT[j].Delrecind,
+			trd.TRADE[i].SETTLEMENT[j].Settlestatus,
+			trd.TRADE[i].SETTLEMENT[j].Tradestatus,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative1,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative2,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative3,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative4,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative5,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative6,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative7,
+			trd.TRADE[i].SETTLEMENT[j].Settlenarrative8,
+			trd.TRADE[i].SETTLEMENT[j].CompAliasWil,
+			trd.TRADE[i].SETTLEMENT[j].CompAliasDesc,
+			trd.TRADE[i].SETTLEMENT[j].CompDepotTypeWil,
+			trd.TRADE[i].SETTLEMENT[j].CompDaccWil,
+			trd.TRADE[i].SETTLEMENT[j].CompServiceWil,
+			trd.TRADE[i].SETTLEMENT[j].SecpAliasWil,
+			trd.TRADE[i].SETTLEMENT[j].SecpServiceWil)
+		_, err := db.Exec(insertStatement)
+		if err != nil {
+			fmt.Printf("error %s", err)
 		}
 	}
 }
