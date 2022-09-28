@@ -42,7 +42,7 @@
         <DRIVER drivertype="TTYP" drivercode="ECAG" />
         <DRIVER drivertype="UPSM" drivercode="YE" />
         <DURATION durationtype="ADAY" durationunit="DAY" duration="0" />
-        <INSTRUMENT instrtype="AINS" p2000instrref="JPY" instrreftype="INT" instrref="JPY" longname="Japanese Yen" quantity="333333333333.333"></INSTRUMENT>
+        <INSTRUMENT instrtype="AINS" p2000instrref="JPY" instrreftype="INT" instrref="JPY" longname="Japanese Yen" quantity="333333333333.333"/>
         <INSTRUMENT instrtype="COBI" p2000instrref="JPY" instrreftype="" instrref="" longname="Japanese Yen" quantity="0.000"></INSTRUMENT>
         <INSTRUMENT instrtype="DENO" p2000instrref="JPY" instrreftype="" instrref="" longname="Japanese Yen" quantity="0.000"></INSTRUMENT>
         <INSTRUMENT instrtype="PINS" p2000instrref="6758" instrreftype="INT" instrref="6758" longname="SONY ORD" quantity="100010001000.100">

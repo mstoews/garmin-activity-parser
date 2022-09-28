@@ -1,4 +1,4 @@
-module xmlParser
+module github.com/mstoews/xlmparser
 
 go 1.18
 
