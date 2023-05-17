@@ -8,10 +8,11 @@ import (
 	_ "github.com/lib/pq"
 	
 	"log"
-	
 	"time"
 	"github.com/mstoews/xlmparser/utils"
 )
+
+
 
 var (
 	debug         = flag.Bool("debug", true, "enable debugging")
@@ -51,12 +52,8 @@ func main() {
 
 	// Open our xmlFile
 	switch *source {
-	case "inst":
-		utils.ProcessInstruments(*filename, db)
-	case "party":
-		utils.ProcessParty(*filename)
-	case "trade":
-		utils.ProcessTrade(*filename, db)
+	case "activity":
+		utils.ProcessActivity(*filename, db)
 	default:
 		panic("Invalid source")
 	}
