@@ -2,17 +2,15 @@ package main
 
 import (
 	"database/sql"
-	
+
 	"flag"
 	"fmt"
 	_ "github.com/lib/pq"
-	
+
+	"github.com/mstoews/xlmparser/utils"
 	"log"
 	"time"
-	"github.com/mstoews/xlmparser/utils"
 )
-
-
 
 var (
 	debug         = flag.Bool("debug", true, "enable debugging")
@@ -21,8 +19,8 @@ var (
 	server        = flag.String("server", "localhost", "the database server")
 	user          = flag.String("user", "admin", "the database user")
 	database      = flag.String("database", "prd-backup-api", "database name")
-	source        = flag.String("source", "trade", "Source type (inst, party, trade)")
-	filename      = flag.String("filename", "./xml/trades.xml", "XML file name")
+	source        = flag.String("source", "activity", "Source type (activity)")
+	filename      = flag.String("filename", "./xml/activity.xml", "XML file name")
 )
 
 func main() {

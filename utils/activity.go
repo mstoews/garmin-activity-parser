@@ -4,111 +4,92 @@ import (
 	"database/sql"
 	"encoding/xml"
 	"fmt"
-	_ "github.com/lib/pq"
-	"io/ioutil"
+	"io"
 	"os"
-) 
-
-type Welcome4 struct {
-	TrainingCenterDatabase TrainingCenterDatabase `json:"TrainingCenterDatabase"`
-}
+	"strconv"
+	_ "strconv"
+)
 
 type TrainingCenterDatabase struct {
-	Activities        Activities `json:"Activities"`         
-	XmlnsNs5          string     `json:"_xmlns:ns5"`         
-	XmlnsNs3          string     `json:"_xmlns:ns3"`         
-	XmlnsNs2          string     `json:"_xmlns:ns2"`         
-	Xmlns             string     `json:"_xmlns"`             
-	XmlnsXsi          string     `json:"_xmlns:xsi"`         
-	XmlnsNs4          string     `json:"_xmlns:ns4"`         
-	XsiSchemaLocation string     `json:"_xsi:schemaLocation"`
+	XMLName        xml.Name `xml:"TrainingCenterDatabase"`
+	Text           string   `xml:",chardata"`
+	SchemaLocation string   `xml:"schemaLocation,attr"`
+	Ns5            string   `xml:"ns5,attr"`
+	Ns3            string   `xml:"ns3,attr"`
+	Ns2            string   `xml:"ns2,attr"`
+	Xmlns          string   `xml:"xmlns,attr"`
+	Xsi            string   `xml:"xsi,attr"`
+	Ns4            string   `xml:"ns4,attr"`
+	Activities     struct {
+		Text     string `xml:",chardata"`
+		Activity struct {
+			Text  string `xml:",chardata"`
+			Sport string `xml:"Sport,attr"`
+			ID    string `xml:"Id"`
+			Lap   []struct {
+				Text                string `xml:",chardata"`
+				StartTime           string `xml:"StartTime,attr"`
+				TotalTimeSeconds    string `xml:"TotalTimeSeconds"`
+				DistanceMeters      string `xml:"DistanceMeters"`
+				MaximumSpeed        string `xml:"MaximumSpeed"`
+				Calories            string `xml:"Calories"`
+				AverageHeartRateBpm struct {
+					Text  string `xml:",chardata"`
+					Value string `xml:"Value"`
+				} `xml:"AverageHeartRateBpm"`
+				MaximumHeartRateBpm struct {
+					Text  string `xml:",chardata"`
+					Value string `xml:"Value"`
+				} `xml:"MaximumHeartRateBpm"`
+				Intensity     string `xml:"Intensity"`
+				TriggerMethod string `xml:"TriggerMethod"`
+				Track         struct {
+					Text       string `xml:",chardata"`
+					Trackpoint []struct {
+						Text           string `xml:",chardata"`
+						Time           string `xml:"Time"`
+						DistanceMeters string `xml:"DistanceMeters"`
+						HeartRateBpm   struct {
+							Text  string `xml:",chardata"`
+							Value string `xml:"Value"`
+						} `xml:"HeartRateBpm"`
+						Extensions struct {
+							Text string `xml:",chardata"`
+							TPX  struct {
+								Text       string `xml:",chardata"`
+								Speed      string `xml:"Speed"`
+								RunCadence string `xml:"RunCadence"`
+							} `xml:"TPX"`
+						} `xml:"Extensions"`
+					} `xml:"Trackpoint"`
+				} `xml:"Track"`
+				Extensions struct {
+					Text string `xml:",chardata"`
+					LX   struct {
+						Text          string `xml:",chardata"`
+						AvgSpeed      string `xml:"AvgSpeed"`
+						AvgRunCadence string `xml:"AvgRunCadence"`
+						MaxRunCadence string `xml:"MaxRunCadence"`
+					} `xml:"LX"`
+				} `xml:"Extensions"`
+			} `xml:"Lap"`
+			Creator struct {
+				Text      string `xml:",chardata"`
+				Type      string `xml:"type,attr"`
+				Name      string `xml:"Name"`
+				UnitId    string `xml:"UnitId"`
+				ProductID string `xml:"ProductID"`
+				Version   struct {
+					Text         string `xml:",chardata"`
+					VersionMajor string `xml:"VersionMajor"`
+					VersionMinor string `xml:"VersionMinor"`
+					BuildMajor   string `xml:"BuildMajor"`
+					BuildMinor   string `xml:"BuildMinor"`
+				} `xml:"Version"`
+			} `xml:"Creator"`
+		} `xml:"Activity"`
+	} `xml:"Activities"`
 }
-
-type Activities struct {
-	Activity Activity `json:"Activity"`
-}
-
-type Activity struct {
-	ID      string  `json:"Id"`     
-	Lap     []Lap   `json:"Lap"`    
-	Creator Creator `json:"Creator"`
-	Sport   string  `json:"_Sport"` 
-}
-
-type Creator struct {
-	Name      string  `json:"Name"`     
-	UnitID    string  `json:"UnitId"`   
-	ProductID string  `json:"ProductID"`
-	Version   Version `json:"Version"`  
-	XsiType   string  `json:"_xsi:type"`
-}
-
-type Version struct {
-	VersionMajor string `json:"VersionMajor"`
-	VersionMinor string `json:"VersionMinor"`
-	BuildMajor   string `json:"BuildMajor"`  
-	BuildMinor   string `json:"BuildMinor"`  
-}
-
-type Lap struct {
-	TotalTimeSeconds    string        `json:"TotalTimeSeconds"`   
-	DistanceMeters      string        `json:"DistanceMeters"`     
-	MaximumSpeed        string        `json:"MaximumSpeed"`       
-	Calories            string        `json:"Calories"`           
-	AverageHeartRateBPM HeartRateBPM  `json:"AverageHeartRateBpm"`
-	MaximumHeartRateBPM HeartRateBPM  `json:"MaximumHeartRateBpm"`
-	Intensity           string        `json:"Intensity"`          
-	TriggerMethod       string        `json:"TriggerMethod"`      
-	Track               Track         `json:"Track"`              
-	Extensions          LapExtensions `json:"Extensions"`         
-	StartTime           string        `json:"_StartTime"`         
-}
-
-type HeartRateBPM struct {
-	Value string `json:"Value"`
-}
-
-type LapExtensions struct {
-	Lx Lx `json:"LX"`
-}
-
-type Lx struct {
-	AvgSpeed      AvgRunCadence `json:"AvgSpeed"`     
-	AvgRunCadence AvgRunCadence `json:"AvgRunCadence"`
-	MaxRunCadence AvgRunCadence `json:"MaxRunCadence"`
-	Prefix        Prefix        `json:"__prefix"`     
-}
-
-type AvgRunCadence struct {
-	Prefix Prefix `json:"__prefix"`
-	Text   string `json:"__text"`  
-}
-
-type Track struct {
-	Trackpoint []Trackpoint `json:"Trackpoint"`
-}
-
-type Trackpoint struct {
-	Time           string               `json:"Time"`          
-	DistanceMeters string               `json:"DistanceMeters"`
-	HeartRateBPM   HeartRateBPM         `json:"HeartRateBpm"`  
-	Extensions     TrackpointExtensions `json:"Extensions"`    
-}
-
-type TrackpointExtensions struct {
-	Tpx Tpx `json:"TPX"`
-}
-
-type Tpx struct {
-	Speed      AvgRunCadence `json:"Speed"`     
-	RunCadence AvgRunCadence `json:"RunCadence"`
-	Prefix     Prefix        `json:"__prefix"`  
-}
-
-type Prefix string
-const (
-	Ns3 Prefix = "ns3"
-)
 
 func ProcessActivity(filename string, db *sql.DB) {
 	xmlFile, err := os.Open(filename)
@@ -116,24 +97,45 @@ func ProcessActivity(filename string, db *sql.DB) {
 		fmt.Println(err)
 	}
 
-	fmt.Printf("Successfully Opened %s\n", filename)
-	
+	// fmt.Printf("Successfully Opened %s\n", filename)
+
 	defer xmlFile.Close()
 
-	byteValue, _ := ioutil.ReadAll(xmlFile)
-	var act Activities
+	byteValue, _ := io.ReadAll(xmlFile)
 
-	xml.Unmarshal(byteValue, &act)
-	insertActivities(&act, db)
-	
+	// fmt.Printf("%s", byteValue)
+	var trn TrainingCenterDatabase
+	xml.Unmarshal(byteValue, &trn)
+	insertActivities(&trn, db)
 }
 
-func insertActivities(act *Activities, db *sql.DB) {
-	for index := 0; index < len(act.Activity.Lap ); index++ {
-		// lap(act.Activity.Lap, db, index)
+func insertActivities(trn *TrainingCenterDatabase, db *sql.DB) {
+	println("Number of Laps :", len(trn.Activities.Activity.Lap))
+	fmt.Print("Time, Distance in Meters, HearRate, Velocity, Cadence, StrideLength ")
+	for index := 0; index < len(trn.Activities.Activity.Lap); index++ {
+		for i := 0; i < len(trn.Activities.Activity.Lap[index].Track.Trackpoint); i++ {
+			var speed, _ = strconv.ParseFloat(trn.Activities.Activity.Lap[index].Track.Trackpoint[i].Extensions.TPX.Speed, 8)
+			var cadence, _ = strconv.ParseFloat(trn.Activities.Activity.Lap[index].Track.Trackpoint[i].Extensions.TPX.RunCadence, 8)
+			var strideLength = speed * .5 * cadence / 100
+			fmt.Print(
+				trn.Activities.Activity.Lap[index].Track.Trackpoint[i].Time, ",",
+				trn.Activities.Activity.Lap[index].Track.Trackpoint[i].DistanceMeters, ",",
+				trn.Activities.Activity.Lap[index].Track.Trackpoint[i].HeartRateBpm.Value, ",",
+				speed, ",",
+				cadence, ",",
+				strideLength, "")
+			fmt.Println()
+		}
+		//fmt.Printf(trn.Activities.Activity.Lap[0].Calories)
+		//fmt.Printf(",")
+		//fmt.Printf(trn.Activities.Activity.Lap[index].Extensions.LX.AvgSpeed)
+		fmt.Println("")
 	}
 }
 
-func lap(lap *Lap, db *sql.DB, index int) {
+/*
+Stride length is equivalent to velocity divided by 0.5 cadence (speed/0.5 cadence).
+Our athlete with a gait velocity of 70 m/min and a cadence of 100 steps per minute would have a
+calculated stride length of 1.4 m: (70 m/min)/(0.5) × 100 steps per minute = stride length of 1.4.
 
-}
+*/
