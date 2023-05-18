@@ -132,7 +132,7 @@ func ProcessActivityNoDB(filename string) {
 }
 
 func insertActivities(trn *TrainingCenterDatabase) {
-	fmt.Print("Time, Distance in Meters, HearRate, Velocity, Cadence, StrideLength ")
+	fmt.Println("Time, Distance in Meters, Heart Rate, KPH, Speed, Cadence, StrideLength ")
 	for index := 0; index < len(trn.Activities.Activity.Lap); index++ {
 		for i := 0; i < len(trn.Activities.Activity.Lap[index].Track.Trackpoint); i++ {
 			var speed, _ = strconv.ParseFloat(trn.Activities.Activity.Lap[index].Track.Trackpoint[i].Extensions.TPX.Speed, 8)
