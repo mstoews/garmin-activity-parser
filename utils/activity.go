@@ -10,6 +10,10 @@ import (
 	_ "strconv"
 )
 
+const minutes = 60
+const seconds = 60
+const meters = 1000
+
 type TrainingCenterDatabase struct {
 	XMLName        xml.Name `xml:"TrainingCenterDatabase"`
 	Text           string   `xml:",chardata"`
@@ -106,21 +110,40 @@ func ProcessActivity(filename string, db *sql.DB) {
 	// fmt.Printf("%s", byteValue)
 	var trn TrainingCenterDatabase
 	xml.Unmarshal(byteValue, &trn)
-	insertActivities(&trn, db)
+	insertActivities(&trn)
 }
 
-func insertActivities(trn *TrainingCenterDatabase, db *sql.DB) {
-	println("Number of Laps :", len(trn.Activities.Activity.Lap))
+func ProcessActivityNoDB(filename string) {
+	xmlFile, err := os.Open(filename)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	// fmt.Printf("Successfully Opened %s\n", filename)
+
+	defer xmlFile.Close()
+
+	byteValue, _ := io.ReadAll(xmlFile)
+
+	// fmt.Printf("%s", byteValue)
+	var trn TrainingCenterDatabase
+	xml.Unmarshal(byteValue, &trn)
+	insertActivities(&trn)
+}
+
+func insertActivities(trn *TrainingCenterDatabase) {
 	fmt.Print("Time, Distance in Meters, HearRate, Velocity, Cadence, StrideLength ")
 	for index := 0; index < len(trn.Activities.Activity.Lap); index++ {
 		for i := 0; i < len(trn.Activities.Activity.Lap[index].Track.Trackpoint); i++ {
 			var speed, _ = strconv.ParseFloat(trn.Activities.Activity.Lap[index].Track.Trackpoint[i].Extensions.TPX.Speed, 8)
+			var kph = speed * seconds * minutes / meters
 			var cadence, _ = strconv.ParseFloat(trn.Activities.Activity.Lap[index].Track.Trackpoint[i].Extensions.TPX.RunCadence, 8)
-			var strideLength = speed * .5 * cadence / 100
+			var strideLength = speed * seconds * .5 / cadence
 			fmt.Print(
 				trn.Activities.Activity.Lap[index].Track.Trackpoint[i].Time, ",",
 				trn.Activities.Activity.Lap[index].Track.Trackpoint[i].DistanceMeters, ",",
 				trn.Activities.Activity.Lap[index].Track.Trackpoint[i].HeartRateBpm.Value, ",",
+				kph, ",",
 				speed, ",",
 				cadence, ",",
 				strideLength, "")
