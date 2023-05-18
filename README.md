@@ -1,0 +1,3 @@
+# garmin-activity-parser
+
+./main 
